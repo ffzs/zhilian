@@ -1,9 +1,9 @@
 CITY = "beijing-530" #beijing-530 , tianjing-531 , dalian-600 , qingdao-703
-KEYWORD = "python"
+KEYWORD = "数据分析"
 
 MONGO_URL='localhost'
-MONGO_DB="ZhiLian-"+CITY+"-"+KEYWORD
-MONGO_TABLE="ZhiLian-test-"+CITY+"-"+KEYWORD
+MONGO_DB="ZhiLian-"+CITY
+MONGO_TABLE=KEYWORD
 
 USER_AGENTS = [
     "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:56.0) Gecko/20100101 Firefox/56.0",

@@ -70,6 +70,10 @@ def get_job_details(job_url,ip_list):
                 tags.append(tag.get_text())
             tag = b.join(tags)
             company_condition = Tianyancha.crawl(a,company_name,ip,usa)
+            if company_condition:
+                pass
+            else:
+                company_condition ={}
             total = {
                 "工作编号":job_code,
                 "工作名称": job_name[0],
@@ -130,7 +134,7 @@ def get_job_url(url,ip_list):
             job_url = 'https://m.zhaopin.com'+a["data-link"]
             t1 = threading.Thread(target=get_job_details,args=(job_url,ip_list))
             t1.start()
-            time.sleep(random.choice(range(1,3)))
+            time.sleep(0.5)
 
     except Exception as e:
         print(e)
@@ -158,8 +162,8 @@ def get_ip_text(file):
 
 if __name__ == '__main__':
     lock = threading.Lock()
-    IP_LIST = get_ip_text("ftx_ip.txt")
-    for page in range(1,316):
+    IP_LIST = get_ip_text("ip_pool.txt")
+    for page in range(457,600):
         print("--------------正在爬第" + str(page) + "页-----------------")
         a_url = 'https://m.zhaopin.com/' + CITY + '/?keyword=' + KEYWORD + '&pageindex=' + str(
             page) + '&maprange=3&publishdate=30&islocation=0'
