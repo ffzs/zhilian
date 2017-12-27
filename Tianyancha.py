@@ -35,7 +35,7 @@ class Tianyancha(object):
             return all
 
 if __name__ == '__main__':
-    content = "北京布雷恩科技有限公司"
+    content = "﻿极客学院"
     app = Tianyancha()
     usa = "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:56.0) Gecko/20100101 Firefox/56.0"
     ip = {"http": "http://183.129.160.75:3128"}

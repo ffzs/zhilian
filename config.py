@@ -3,7 +3,7 @@ KEYWORD = "数据分析"
 
 MONGO_URL='localhost'
 MONGO_DB="ZhiLian-"+CITY
-MONGO_TABLE=KEYWORD
+MONGO_TABLE="detials"
 
 USER_AGENTS = [
     "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:56.0) Gecko/20100101 Firefox/56.0",
